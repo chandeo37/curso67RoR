@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario clase 67</title>
+</head>
+
+<body>
+    <div>
+        <!--Formularios y componentes-->
+        <!--action es la ruta donde se envia la informacion-->
+        <!--method, se establece la forma de pasar los parametros-->
+        <!--Get pasa los parametros en la url, y pos pasa los parametros de manera oculta-->
+        <form action="/">
+            <!--input de ingreso de texto-->
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre">
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido">
+            <br>
+            <input type="email" name="email" id="email">
+            <label for="email">Email:</label>
+            <br>
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass">
+            <!--input de fecha-->
+            <br>
+            <hr>
+            <label for="fecha1">Fecha 1 date:</label>
+            <input type="date" name="fecha1" id="fecha1">
+            <br>
+            <label for="fecha2">Fecha 2 datetime-local:</label>
+            <input type="datetime-local" name="fecha2" id="fecha2">
+            <br>
+            <!--formato de fecha que uno quiera-->
+            <label for="fecha3">Fecha 3 datetime:</label>
+            <input type="datetime" name="fecha3" id="fecha3">
+            <br>
+            <hr>
+            <!--input de seleccion u opcion-->
+            <!--radio, value es el valor para capturar los datos-->
+            <label for="masc">Masculino</label>
+            <input type="radio" name="genero" id="masc" value="1">
+            <label for="fem">Femenino</label>
+            <input type="radio" name="genero" id="fem" value="2">
+            <label for="otro">Otro</label>
+            <input type="radio" name="genero" id="otro" value="3">
+            <!--el name debe ser igual en todas las opciones-->
+            <br>
+            <!--checked, el usuario elegi mas de una opcion-->
+            <label for="verano">Verano:</label>
+            <input type="checkbox" name="verano" id="verano" value="v">
+
+            <label for="otoño">Otoño:</label>
+            <input type="checkbox" name="otoño" id="otoño" value="o">
+
+            <label for="invierno">Invierno:</label>
+            <input type="checkbox" name="invierno" id="invierno" value="i">
+
+            <label for="primavera">Primavera:</label>
+            <input type="checkbox" name="primavera" id="primavera" value="p">
+            <br>
+            <!--Selector o llamado select, se puede llenar dinamicamente de l BD. -->
+            <select name="lenguajes" id="lenguajes">
+                <option value="0">Seleccione un lenguaje.....</option>
+                <option value="1">Html</option>
+                <option value="2">Css</option>
+                <option value="3">JavaScript</option>
+                <option value="4">Ror</option>
+
+            </select>
+            <br>
+            <!--se usa para agregar informacion al usuario-->
+            <label for="detalle">Ingrese información detallada:</label>
+            <br>
+            <textarea name="detalle" id="detale" cols="5" rows="3"></textarea>
+            <!--boton-->
+            <br>
+            <!--typebuton no sirve por si solo para enviar formulario-->
+            <input type="button" value="Enviar...">
+            <input type="submit" value="Enviar....">
+
+
+
+
+
+
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
