@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos CSS</title>
+    <style>
+        /*3 formas de dar estilo*/
+        /*etiqueta*/
+        
+        body {
+            background-color: antiquewhite;
+        }
+        
+        p {
+            color: gold;
+        }
+        
+        img {
+            width: 300px;
+            height: 300px;
+        }
+        /*clases* 1 o mas elementos iguales o distintos*/
+        
+        .colorparrafos {
+            color: aqua;
+        }
+        /*por id(#) para 1 solo elemento*/
+        
+        #parrafo4 {
+            color: blue;
+        }
+        
+        #container {
+            background: #ff997D no-repeat fixed center;
+            background-color: brown;
+            background-image: url("imagenes/artesania2.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>Parrafo 1</p>
+        <p class="colorparrafos">Parrafo 2</p>
+        <p class="colorparrafos">Parrafo 3</p>
+        <p class="colorparrafos" id="parrafo4">Parrafo 4</p>
+        <span class="colorparrafos">span con texto</span>
+        <br>
+        <img src="imagenes/yo.jpg" alt="Ron">
+    </div>
+
+</body>
+
+</html>
