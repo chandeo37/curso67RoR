@@ -1,0 +1,117 @@
+#header {
+    background-color: #f6f6f6;
+    width: 970px;
+    margin-bottom: 15px;
+}
+
+#header h1,
+#header p {
+    display: inline-block;
+}
+
+h2 {
+    color: white;
+}
+
+#header p {
+    margin-left: 573px;
+}
+
+#imagen {
+    width: 470px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    border-style: solid;
+    border-color: grey;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#about {
+    width: 321px;
+    display: inline-block;
+    margin-left: 15px;
+    border-style: solid;
+    border-color: grey;
+    background: linear-gradient(#fedefe, #d4c1cc);
+    margin-top: 10px;
+}
+
+#fondo {
+    background: radial-gradient(#503309, #d67355);
+    width: 970px;
+    vertical-align: top;
+}
+
+h2 {
+    background-image: linear-gradient(#afab83, #878593, #afab83);
+    margin-top: 0px;
+}
+
+.lamode,
+.family,
+.eleven {
+    width: 268px;
+    display: inline-block;
+    vertical-align: top;
+    background: linear-gradient(#fedefe, #d4c1cc);
+    margin-right: 15px;
+}
+
+.cajafoto {
+    width: 250px;
+}
+
+.logocaja {
+    width: 40px;
+}
+
+#cajas {
+    margin: 30px;
+}
+
+button {
+    min-width: 50px;
+    height: auto;
+    padding: 5px 5px;
+    margin: 5px auto 10px auto;
+    display: block;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(64, 125, 97);
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+#footer {
+    background: #f7f7f7;
+    width: 975px;
+    height: 85px;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.foot {
+    display: inline-block;
+    margin-left: 380px;
+    margin-top: 10px;
+}
+
+#redes {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 300px;
+    vertical-align: top;
+    font-style: italic;
+}
+
+.rrss {
+    vertical-align: top;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
