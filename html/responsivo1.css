@@ -1,0 +1,22 @@
+.nvvboton {
+    width: 200px;
+    height: 150px;
+}
+
+@media only screen and (max-width: 480px) {
+    .nvvboton {
+        background-color: yellow;
+    }
+}
+
+@media only screen and (min-width:481px) {
+    .nvvboton {
+        background-color: blue;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .nvvboton {
+        background-color: red;
+    }
+}

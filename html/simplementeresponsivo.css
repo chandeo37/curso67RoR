@@ -1,0 +1,93 @@
+* {
+    padding: 3px;
+    margin: 5px;
+}
+
+.header {
+    background-color: grey;
+    border: 2px solid;
+}
+
+.contenido {
+    background-color: rgb(44, 42, 42);
+    border: 2px solid;
+}
+
+.footer {
+    background-color: yellow;
+    border: 2px solid;
+    color: tomato;
+    font-size: 18px;
+}
+
+
+/*pc*/
+
+@media only screen and (min-width:1024px) {
+    .header {
+        width: 100%;
+    }
+    .contenido {
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+    #phone {
+        display: none;
+    }
+    #tablet {
+        display: none;
+    }
+    #desktop {
+        display: inline;
+    }
+}
+
+
+/*tablet*/
+
+@media only screen and (min-width:481px) and (max-width:1023px) {
+    .header {
+        width: 100%;
+    }
+    .contenido {
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+    #phone {
+        display: none;
+    }
+    #tablet {
+        display: inline;
+    }
+    #desktop {
+        display: none;
+    }
+}
+
+
+/*celular*/
+
+@media only screen and (max-width:479px) {
+    .header {
+        width: 100%;
+    }
+    .contenido {
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+    #phone {
+        display: inline;
+    }
+    #tablet {
+        display: none;
+    }
+    #desktop {
+        display: none;
+    }
+}
