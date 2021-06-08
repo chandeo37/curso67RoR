@@ -1,0 +1,24 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    background-color: grey;
+    padding: 15px;
+}
+
+#div1 {
+    background-color: lightseagreen;
+    height: 200px;
+}
+
+#div2 {
+    background-color: rgb(6, 167, 158);
+    height: 200px;
+}
+
+#div3 {
+    background-color: rgba(57, 71, 71, 0.801);
+    height: 200px;
+}

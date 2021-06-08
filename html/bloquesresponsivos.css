@@ -1,0 +1,124 @@
+/*CSS reset settings here*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 950px;
+    background-color: silver;
+    margin: 0px auto;
+    /*margen interior de 15px*/
+    padding: 15px;
+}
+
+#header {
+    min-height: 150px;
+    background-color: green;
+    /*desplazo el header 15px*/
+    margin-bottom: 15px;
+}
+
+#navigation {
+    min-height: 300px;
+    width: 200px;
+    background-color: blue;
+    /*alineamos en el top en bloques margen izquierdo de 15px*/
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+#main_content {
+    min-height: 400px;
+    width: 700px;
+    background-color: red;
+    display: inline-block;
+    padding: 15px;
+}
+
+.subcontents {
+    min-height: 200px;
+    width: 210px;
+    background-color: yellow;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#advertisement {
+    min-height: 120px;
+    width: 660px;
+    background-color: purple;
+    margin-top: 15px;
+}
+
+@media only screen and (min-width:1024px) {
+    /*pc*/
+    #header {
+        width: 99%;
+    }
+    #navigation {
+        width: 25%;
+        display: inline-block
+    }
+    #main_content {
+        width: 69%;
+    }
+    .subcontents {
+        width: 31%;
+        display: inline-block;
+    }
+    #advertisement {
+        width: 98%;
+        display: inline-block;
+    }
+}
+
+
+/*tablet*/
+
+@media only screen and (min-width:481px) and (max-width:1023px) {
+    #header {
+        width: 100%;
+    }
+    #navigation {
+        width: 0%;
+        display: none;
+    }
+    #main_content {
+        width: 96%;
+    }
+    .subcontents {
+        width: 48%;
+        display: inline-block;
+    }
+    #advertisement {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+
+/*celular*/
+
+@media only screen and (max-width:480px) {
+    #header {
+        width: 48%;
+    }
+    #navigation {
+        width: 0%;
+        display: none;
+    }
+    #main_content {
+        width: 45%;
+    }
+    .subcontents {
+        width: 100%;
+        display: inline-block;
+    }
+    #advertisement {
+        width: 100%;
+        display: inline-block;
+    }
+}
