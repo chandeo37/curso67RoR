@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionesbasica1::javascript</title>
+    <script>
+        //Ejercicio 1
+        //___________
+        function a() {
+            return 35;
+        }
+        console.log(a())
+            //Prediccion:35
+            //Resp: 35
+
+        //_______________________
+        //Ejerciccio 2
+        //--------------------------
+        function a() {
+            return 4;
+        }
+        console.log(a() + a());
+        //Prediccion: 8
+        //Resp: 8
+        //_____________________
+
+
+        //Ejercicio 3
+        //--------------------------------
+        function a(b) {
+            return b;
+        }
+        console.log(a(2) + a(4));
+        //Prediccion: 6
+        //Resp.: 6
+
+        //----------------------------
+        //Ejercicio 4
+        //__________________
+        function a(b) {
+            console.log(b);
+            return b * 3;
+        }
+        console.log(a(3));
+        //Prediccion: 3,9
+        //Resp:3,9
+
+
+        //-------------------
+        //Ejercicio 5
+        //--------------------
+        function a(b) {
+            return b * 4;
+            console.log(b);
+        }
+        console.log(a(10));
+        //Prediccion: 40
+        //resultado:40
+
+
+        //------------------
+        //Ejercicio 6
+        //------------------
+        function a(b) {
+            if (b < 10) {
+                return 2;
+            } else {
+                return 4;
+            }
+            console.log(b);
+        }
+        console.log(a(15));
+        //Esperado:4
+        //Resp:4
+
+
+        //-------------------
+        //Ejercicio 7
+        //______________
+        function a(b, c) {
+            return b * c;
+        }
+        console.log(10, 3);
+        console.log(a(3, 10));
+        //Esperado :10,3,30
+        //Resp: 10,3,30
+
+
+        //--------------------------
+        //Ejercicio 8
+        //--------------------------
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3);
+        console.log(4);
+        //Prediccion: 3,4
+        //Resp:3,4
+
+
+        //-------------
+        //Ejercicio 9
+        //---------------
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                i = i + 2;
+                console.log(i);
+            }
+        }
+        a();
+        //Prediccion: 2,5,8,11
+        //Reps: 2,5,8,11
+
+
+        //-------------------------
+        //Ejercicio 10
+        //-------------------------
+        function a(b, c) {
+            for (var i = b; i < c; i++) {
+                console.log(i);
+            }
+            return b * c;
+        }
+        a(0, 10);
+        console.log(a(0, 10));
+        //Prediccion: 0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0
+        //Reps: 0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0
+
+
+        //_--------------------
+        //EJERCICIO 11
+        //------------------
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(j);
+                }
+                console.log(i);
+            }
+        }
+        //PREDICCION: UNDEFINED
+        //RESP: NO TIENE NINGUN RESULTADO POR QUE LA IMPRESIÓN DE CONSOLE.LOG(I), NO TIENE SALIDA YA QUE ESTA VARIABLE NO TIENE NINGUN VALOR
+
+
+        //_--------------------
+        //EJERCICIO 12
+        //------------------
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(i, j);
+                }
+                console.log(j, i);
+            }
+        }
+        //PREDICCION: UNDEFINED
+        //RESP: NO TIENE NINGUN RESULTADO POR QUE LA IMPRESIÓN DE CONSOLE.LOG(J,I), NO TIENE SALIDA YA QUE ESTA VARIABLE NO TIENE NINGUN VALOR.
+
+        //_--------------------
+        //EJERCICIO 13
+        //------------------
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        console.log(z);
+        //PREDICCION:10
+        //RESP:10
+
+        //_--------------------
+        //EJERCICIO 14
+        //------------------
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        a();
+        console.log(z);
+        //PREDICCION:15
+        //RESP:10
+
+
+        //_--------------------
+        //EJERCICIO 15
+        //------------------
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+            return z;
+        }
+        z = a();
+        console.log(z);
+        //PREDICCION:15
+        //RESP:15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function a(b, c) { //b=0; c=10;
+            for (var i = b; i < c; i++) {
+                console.log(i);
+            }
+            return b * c; //es lo que se devuelve al llamado de la función//return 0
+        }
+        a(0, 10); //llamdo a la función//0 es informativo
+        console.log(a(0, 10));
+        resp:
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
