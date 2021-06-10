@@ -151,18 +151,19 @@
                 //|| o una cosa o la otra
                 if (i < rangoInicio) {
                     newArray.push(array[i]);
-                } else if (i > rangofin) {
-                    newArray.push(array[i])
+                } else {
+                    if (i > rangofin) {
+                        newArray.push(array[i])
+                    }
                 }
+
+
+                //agrega elemento al array con el indice
+                //agrega al final del arreglo
+
             }
-
-
-            //agrega elemento al array con el indice
-            //agrega al final del arreglo
-
-        }
-        //console.log(newArray)
-        return newArray;
+            //console.log(newArray)
+            return newArray;
 
         }
         var retorno = removerRango2([20, 30, 40, 50, 60, 70], 2, 4);
