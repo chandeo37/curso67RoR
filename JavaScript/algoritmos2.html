@@ -35,7 +35,7 @@
         x = a(3); //asignacion y un llamado a una funcion con un parametro
         //x=18
         console.log('x is', x);
-        /n is 3, 
+        //n is 3, 
         //------------------------------------------
         /*ejercicio 4*/
         function a(n) { //funcion a y tiene un parametro n
@@ -160,7 +160,7 @@
 
         function printUpTo(x) {
             if (x < 0) //numero negativo
-                consoloe.log("numero negativo";);
+                consoloe.log("numero negativo");
             return false;
         }
         for (let i = 1; i < x; i++) {
@@ -168,7 +168,7 @@
 
         }
         // your code here
-        }
+
         printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
         y = printUpTo(-10); // debería imprimir false
         console.log(y); // debería imprimir false
@@ -183,6 +183,77 @@
         console.log(y) // // debería imprimir 32640
 
         //desafio
+
+        //ejercicio 17
+        //completa el codigo de mas abajo para que imprima
+        // los enteros de 0 a x e y donde cada entero imprima
+        //la suma parcial , Haz que la funcion entregue la suma final
+        function printSum(x) { //x=255
+            var sum = 0;
+            //variable acumuladora
+            //variable= variable(contenido)+algo
+            //puede ser un numero, string, array o una concatenacion
+            //your code here
+            //i=i+1 incremento, suma parcial
+            //contadores.
+            for (let i = 0; i <= x; i++) {
+                console.log("numero", i); //imprime el valor de i
+                sum = sum + i; //agrega a la suma parcial
+                console.log("suma parcial" + sum); //se guarda la suma parcial y se incrementa
+
+            }
+            return sum
+        }
+        y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
+        console.log(y) // // debería imprimir 32640
+
+        //ejercicio 18
+        //la funcion entregue la suma de todos
+        //los valores en un array dado
+        function printSumArray(x) { //x=[1,2,3]
+            var sum = 0; //varable que acumula la suma parcial de los elementos
+            for (var i = 0; i < x.length; i++) {
+                //your code here
+                sum = sum + x[i];
+                //sum=0+0
+                //sum=0+1
+            }
+            return sum;
+        }
+        console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+        //console.log(6)
+        //resp: 6
+
+        //EJERCICIO 19
+        //crea una funcion que entrega el elemnto mas grande
+        //en un array. Por ejemplo largestElement([1,30,5,7])
+        //de resultado 30
+        function largestElement(arreglo) {
+            let numeroMayor = arreglo[0]; //cuando se compara los elemntos por que se busca el mas grande
+            for (let i = 0; i < arreglo.length; i++) {
+                //compara dos numeros
+                if (numeroMayor < arreglo[i]) {
+                    //sobreescribe el numero mayor
+                    numeroMayor = arreglo[i];
+
+                }
+
+            }
+
+
+            return numeroMayor; //return 30
+        }
+        console.log(largestElement(1, 30, 5, 7));
+        //consolo.log(30);
+        //resp:30
+
+        //ejercicio 20
+        function numeros() {
+            for (var b = 1; b <= 255; b++) {
+                console.log(b);
+            }
+            return b
+        }
     </script>
 </head>
 

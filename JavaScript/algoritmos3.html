@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>algortimos3</title>
+    <script>
+        //ejercicio 1
+        function a(x, y) { //funcion que se llama a
+            //x=5 Y=5
+            return 5;
+        }
+        console.log(a(5, 5));
+
+        //ejercicio 1.1
+        funcion obtenerAlumnoAzar(arreglo) { //arreglo.lenght=18
+            //numero random entre un segmento
+            //Math.random retorna valores entre 0 y 1, sin considerar el uno
+            //math.flor entrega valores enteros
+            var posicion = Math.floor(Math.random() * arreglo.lenght) //0-17
+                //accedo por la posicion
+            var apellido = arreglo[posicion];
+
+            console.log("El elegido es: " + apellido);
+
+        }
+        var alumnos = ["Calcumil", "Mella", "Jimenez", "Saquel", "Fernandez",
+            "Pavez", "Minio", "Franco", "Gonzalez", "Muñoz", "Flores", "Hernandez", "Tapia",
+            "Alarcon", "Muller", "Aldunate", "Figueroa"
+        ];
+        //pasar el arreglo a la funcion
+        //llamar a la funcion con el nombre
+        obtenerAlumnoAzar(alumnos);
+
+        //---------------
+        //ejercicio 2
+        function a(x, y) { //x=2 y=2
+            z = [2, 2, 5] //z.length=0//arreglo vacio//cantidad de elementos en el arreglo
+            z.push(x); //agrega al final del arreglo z.push(2)
+            z.push(y);
+            z.push(5); //agrega al final del arreglo
+            console.log(z); //console.log[2,2,5]
+            return z;
+        }
+        b = a(2, 2) //b=[2,2,5]
+        console.log(b); //console.log[2,2,5]
+        console.log(a(6, 8)); //console.log([6,8,5])
+
+        //resp:[2,2,5][2,2,5][6,8,5]
+
+        //ejercicio3
+
+        function a(x) { //x=2
+            z = [2, 2]; //arreglo vacio
+            z.push(x);
+            z.pop();
+            z.push(x);
+            z.push(x);
+            return z; //return [2,2]
+        }
+        y = a(2); //y=[2,2,5]
+        y.push(5);
+        console.log(y); //console.log([2,2,5])
+        //resp [2,2,5]
+
+        //ejercicio 4
+        function a(x) { //una funcion q recibe un parametrox={2,3,4,5]}
+            //    
+            if (x[0] < x[1]) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        b = a([2, 3, 4, 5])
+        console.log(b);
+        //resp: true
+
+        //ejercicio 5
+        function a(x) {
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > 0) {
+                    x[i] = “Coding”;
+                }    
+            }    
+            return x;
+        }
+        console.log(a([1, 2, 3, 4]))
+            //resp: [coding,coding,coding,coding]
+            //ejercicio 6
+        function a(x) { //x=([5, 7, -1, 4]))
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > 5) {
+                    x[i] = “Coding”;
+                } else if (x[i] < 0) {
+                    x[i] = “Dojo”;
+                }    
+            }    
+            return x; //return [5,coding,dojo,4]
+        }
+        console.log(a([5, 7, -1, 4]))
+
+        //EJERCICIO 7
+        function a(x) { //x=[5,10]
+            if (x[0] > x[1]) {
+                return x[1];
+            }
+            return 10;
+        }
+        b = a([5, 10]) //b=10
+        console.log(b); //console.log(10)
+        //resp:10
+
+        //ejercicio 8
+        function sum(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i];
+                console.log(sum);
+            }
+            return sum;
+        }
+        //resp::no muestra nada
+        //-----------------------------
+        //ejercicio 9
+        //promedio
+        //-------------------------
+        function printAverage(x) { //x=[1,2,3]; x.length=3
+            var sum = 0;
+            // your code here
+            //recorre un arreglo for
+            for (let i = 0; i < x.length; i++) {
+                //suma parcial, acumulando
+                sum = sum + x[i];
+                //sum=3+x[2];
+                //sum=3+3;
+                //sum=6;
+
+            }
+            var promedio = sum / x.length;
+            return promedio;
+
+
+        }
+        y = printAverage([1, 2, 3]); //y
+        console.log(y); // should log 2
+
+        y = printAverage([2, 5, 8]);
+        console.log(y); // should log 5
+        //------------------------------------
+        //ejercicio 10
+        //numeros impares 1 to 255
+        //___________________________________
+        function returnOddArray() {
+            // your code here
+            let array = [];
+            for (let i = 0; i <= 255; i++) {
+                if (i % 2 != 0) { //el resto distinto de cero=numero impar
+                    array.push(i); //agrega al final del arreglo
+                }
+                //variante
+                //for(let i=1;i<=255;i+=2)
+                //array.push(i)
+
+            }
+            //retorna el arreglo por que tiene los impares
+            return array;
+
+        }
+        y = returnOddArray();
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        //ejercicio 11
+        //3) Cuadra cada valor con un array dado, 
+        //eleva al cuadrado cada elemento del array y sobreescribe
+        //obteniendo el mismo array con valores cambiados..
+        function squareValue(x) { //x=[1,2,3]
+            // your code here
+            for (let i = 0; i < x.length; i++) {
+                //cuadrado del numero
+                //sobreescritura del cuadrado
+                x[i] = x[i] * x[i];
+                //propiedad math
+                //x[i] = Math.pow(x[i], 2);
+
+            }
+
+            return x;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
