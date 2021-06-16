@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Funciones de jQuery</title>
+    <script>
+        $(document).ready(function() {
+           
+//click
+                $('#boton1').click(function(){
+                    alert("click en el boton 1")
+                });
+                $('#boton2').click(function(){
+                    $('#parrafo2').hide();
+                });
+                    $('#boton3').click(function(){
+                    $('#parrafo2').show();
+                });
+                $('#boton4').click(function(){
+                    $('#parrafo2').toggle();//oculta o muesta un elemento
+                });
+                //slideDown, efecto deslizante
+                $("#deslizar").click(function(){
+                $("#panel").slideDown(3000);
+                 });
+                 //slideUp efecto deslizantea hacia arriba
+                 $("#deslizar").click(function(){
+                $("#panel").slideUp(5000);
+                 });
+                 //slideToggle, desliza hacia abajo hacia arriba
+                 $("#deslizar1").click(function(){
+                $("#panel1").slideToggle("slow");
+                 });
+                 $("#boton5").click(function(){
+                $("#div1").fadeIn("slow");
+                });
+                $("#boton6").click(function(){
+                    $("#div2").fadeOut("slow");
+                });
+                $("#boton7").click(function(){
+                $("#p1:first").addClass("intro note");
+                });
+                //after--inserta texto despues de un elemento
+                $("#boton8").click(function(){
+                 $("p").after("<p>Hello world!</p>");
+                 });
+                 //before--inserta texto antes de un elemento
+                 $("#boton9").click(function(){
+                $("#p2").before("<p>Hello world!</p>");
+                 });
+                 $("#boton11").click(function(){
+                alert($("#p3").html());
+                });
+                //.attr establece el ancho de la imagen
+                $("#boton12").click(function(){
+                $("#img3").attr("width", "500");
+                });
+                //retorna el valor del primer registro
+                $("#boton13").click(function(){
+                alert($("input:text").val());
+                });
+                //.text
+                $("#boton14").click(function(){
+                $(".pp").text("Hello world!");
+                });
+                
+                    
+                
+
+              //fin jquery
+   });
+   function beforeText(){
+                    var txt1 = "<b>I </b>";          // Create element with HTML
+                    var txt2 = $("<i></i>").text("love ");   // Create with jQuery
+                    var txt3 = document.createElement("b");  // Create with DOM
+                    txt3.innerHTML = "jQuery!";
+                    $("img").before(txt1, txt2, txt3);  // Insert new elements before img
+                }
+                //agrega texto antes
+                function appendText() {
+                    //var txt1 = "<p>Text.</p>";        // Create text with HTML
+                    //var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+                    var txt3 = document.createElement("p");
+                    txt3.innerHTML = "Text.";         // Create text with DOM
+                    $("body").append(txt3);   // Append new elements
+                }
+    </script>
+    <style>
+        #panel, #deslizar {
+                    padding: 5px;
+                    text-align: center;
+                    background-color: #e5eecc;
+                    border: solid 1px #c3c3c3;
+                    }
+
+        #panel {
+                    padding: 50px;
+                    display: none;
+                    }
+        #panel1, #deslizar1 {
+                    padding: 5px;
+                    text-align: center;
+                    background-color: #e5eecc;
+                    border: solid 1px #c3c3c3;
+                    }
+
+        #panel1 {
+                    padding: 50px;
+                    display: none;
+                    }
+                    .intro {
+                            font-size: 30px;
+                            color: blue;
+                    }
+                    .note {
+                            background-color: yellow;
+                    }
+    </style>
+</head>
+<body>
+    <h1> Función click</h1>
+    <p>Clickea el boton para llamar al evento click</p>
+    <button id="boton1">Funcion Click</button>
+    <hr>
+    <h1> Función Hide Toggle</h1>
+    <p id="parrafo2">Clickea el boton hide y ocultar parrafo</p>
+    <button id="boton2">Funcion hide</button>
+    <button id="boton3">Funcion show</button>
+    <button id="boton4">Funcion Toggle</button>
+    <hr>
+    <div id="deslizar"> Clik para dezlizar el panel</div>
+    <div id="panel">Hola soy un panel deslizante</div>
+
+    <div id="deslizar1"> Clik para dezlizar el panel</div>
+    <div id="panel1">Hola soy un panel deslizante</div>
+    <hr>
+    <p>Demostracion Para fadeIn()</p>
+    <button id="boton5">Click para mostrar el cuadrado</button>
+    <br><br>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+
+    <p>Demostracion Para fadeOut()</p>
+    <button id="boton6">Click para desvanecer un elemento visible</button>
+    <br><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+    <hr>
+    <h1>Demostración addClass</h1>
+
+    <p>Este es el primer parrafo.</p>
+    <p id="p1">Este es otro parrafo.</p>
+
+    <button id="boton7">Agrega dos nombres de clase al primer parrafo</button>
+    <hr>
+
+    <p>Click en el boton para insertar texto antes de la imagen.</p>
+    <img src="w3jquery.gif" alt="jQuery" width="100" height="140">
+
+    <button onclick="beforeText()">Inserta antes</button>
+    <hr>
+    <button id="boton8">Inserta contenido al final</button>
+
+    <p>Este es un parrafo.</p>
+    <p>Este es otro parrafo.</p>
+    <hr>
+    <button id="boton9">Inserta contenido al principio</button>
+
+    <p id="p2">Este es un parrafo.</p>
+    <p>Este es otro parrafo.</p>
+    <hr>
+    <p>Este es un parrafo demostracion de append.</p>
+    <button id="boton10" onclick="appendText()">Agregar texto</button>
+    
+    <hr>
+    <button id="boton11">Retorna el contenido del elemento p</button>
+
+    <p id="p3">Este es un  <b>parrafo</b>.</p>
+    <hr>
+    
+    <img id="img3" src="w3jquery.gif" alt="Pulpit Rock" width="284" height="213"><br>
+    <button id="boton12">Establece el ancho de la imagen</button>
+    <hr>
+    Firstname: <input type="text" name="fname" value="Peter"><br>
+    Lastname: <input type="text" name="lname" value="Griffin"><br><br>
+
+    <button id="boton13">Retorna el valor del primer registro (.val)</button>
+    <hr>
+    <button id="boton14">Establece contenido te texto para los <span>P</span></button>
+
+    <p class="pp">This is a paragraph.</p>
+    <p class="pp">This is another paragraph.</p>
+
+
+
+
+
+
+
+
+</body>
+</html>

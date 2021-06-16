@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //una vez que este cargada la pagina web ba a aestar a la espera
+        //es un listener q espera ser llamado
+        //cuando se realiza algun tipo de accion en una oagina html
+        //$(dolar)se ocupa jquery
+        //siempre termina con  });
+        //libreria que facilita la interacicion de javascript
+        $(document).ready(function() {
+            //estructura bas
+           //estructura bas---> $('').accion(function){});
+           //etiqueta,clase,id, se ade accion a los elementos de html
+           //acciones por etiqueta
+           //cpatura a travez de la etiqueta
+           //todos los button de la pagina se vene afectados
+           $('button').click(function() {
+               console.log("Accion por etiqueta Button");
+               alert("Accion por etiqueta Button");
+           });
+           //etiqueta input
+           /*$('input').click(function() {
+               console.log("Accion por etiqueta input Button");
+               alert("Accion por etiqueta input");
+           });*/
+
+           //acciones por clase por punto class(.)
+
+           $('input.input2').click(function() {
+               console.log("Accion por clase Button");
+               alert("Accion por clase Button");
+           });
+           $('#input3').click(function() {
+               console.log("Accion por id Button");
+               alert("Accion por id Button");
+           });
+           $('#inputtest').click(function() {
+              var texto = $('#parrafo').text();
+              //cpaturando el id del parrafo
+              console.log(texto);
+              $('#parrafo').text("esta es una prueba");
+
+           });
+
+
+
+
+
+
+
+       //fin jquery
+   });
+    </script>
+</head>
+<body>
+    <div>
+        <button>button</button>
+        
+        <input type="button" value="input2" class="input2">
+        <input type="button" value="input3" id="input3">
+        <p id="parrafo" class="input2"> clase input 2Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ipsum tempore laboriosam repudiandae amet ad illum minima </p>
+        <input id="inputtest" type="button" value="input1">
+        <!--clase es generica pero el id es unico-->
+        <!--ser especifico con la clase o con la etiqueta-->
+    </div>
+    
+</body>
+</html>
