@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Objetos::</title>
+    <script>
+        var Dany = ['Daenerys', 'Targaryen', 22, 'House Targaryen', 'Valyrian', 'Queen of the Andals the Rhoynar and the First Men', 'Lady Regnant of the Seven Kingdoms', 'Protector of the Realm', 'Khaleesi of the Great Grass Sea', 'Breaker of Chains', 'Mother of Dragons', 'Queen of Meereen']
+        console.log([2]);
+        //objetos: tienen caracteristicas o atributos
+        //que se le asignan
+        //se hace como un diccionario--palabras que estan ordenadas
+        //key o clave que se accede al atributo
+        var Dany = {
+        nombre: 'Daenerys',
+        apellido: 'Targaryen',
+        edad: 22,
+        allegiance: 'House Targaryen',
+        ancestry: 'Valyrian',
+        titulos: ['Queen of the Andals, the Rhoynar and the First Men', 'Lady Regent of the Seven Kingdoms',
+         'Protector of the Realm', 'Khaleesi of the Great Grass Sea', 'Breaker of Chains', 'Mother of Dragons', 'Queen of Meereen']}
+            console.log(Dany.nombre,Dany.apellido);
+            console.log(Dany.titulos);//retorna un array
+            console.log(Dany.titulos[1]);//se accede a travez de la posicion
+            console.log(Dany.titulos.length);
+            //imprime los titulos por separados
+            for(var i=0; i< Dany.titulos.length;i++){
+                console.log(Dany.titulos[i]);
+            }
+            
+             var dojo = {};                                 // crea un objeto vacío
+                dojo = {
+                name: 'Coding Dojo',                         // la propiedad puede almacenar un string
+                number_of_students: 25,                      // la propiedad puede almacenar un número
+                instructors: ['Andrew', 'Michael', 'Jay'],   // la propiedad puede almacenar arrays
+                location: {                                  // ¡la propiedad puede incluso almacenar otro objeto!
+                    city: 'San Jose',
+                    state: 'CA',
+                    zipcode: 95112
+                }
+                }                                              // accede a las propiedades del objeto con notación de punto (.)
+                                 // o notación de [] corchete (nota: escribe la clave entre comillas)
+                console.log(dojo.instructors[1]);//michael
+                console.log(dojo.location.state);//ca
+                //inserta un elemento del array
+                dojo.instructors.push('Isra');
+                dojo.instructors.push('andres');
+                dojo.instructors.push('cher');
+                dojo.instructors.push('maira');
+                //shift()::elimina el primer elemento
+                dojo.instructors.shift();
+                //como puedo eliminar el elemento que esta al medio
+                //splice--cual es la posicion donde esta el elemento
+                //cantidad de elementos a eleiminar
+                dojo.instructors.splice(1,1);
+                //elimina desde la posicion hasta cuantos se
+                //elimina desde la derecha
+                dojo.instructors.splice(0,2);
+                //array de objetos, arreglo que tiene adentro objetos
+                var glazedDonuts = [
+                    {
+                        frosting: 'glazed',
+                        style: 'cake',
+                        type: 'old fashioned',
+                        age: '45',
+                        time: 'minutes'
+                    },
+                    {
+                        frosting: 'glazed',
+                        style: 'yeast raised',
+                        type: 'regular',
+                        age: '5',
+                        time: 'minutes'
+                    },
+                    {
+                        frosting: 'glazed',
+                        style: 'yeast raised',
+                        type: 'jelly filled',
+                        age: '1',
+                        time: 'seconds'
+                    }
+                    ];
+
+                    //glazedDonuts.length=3
+                    console.log(glazedDonuts[1]);
+                    //se accede al objeto a travez de la posicion
+                    //se accede al elemento con type
+                    console.log(glazedDonuts[1].type);
+                    //obtener todos los type
+                    for(i=0; i<glazedDonuts.length;i++){
+                        console.log(glazedDonuts[i].type)
+                    }
+                    //objeto.clave
+                    //array[indice]
+
+
+                
+                
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
