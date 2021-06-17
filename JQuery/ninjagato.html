@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ninja gato</title>
+    <script>
+        //var temp=src->(ninja1,png)
+        //src= alt-src(cat1.png)
+        //alt-src= temp->ninja1.png
+        $(document).ready(function() {
+            for(let i= 0; i<=4;i++){
+                $('#container').append('<img src=ninja' + i + '.png alt-src=cat' + i +'.png><br>');
+
+            }
+            //variable de intercambio
+            $('img').click(function(){
+                //busca el nombre y lo guarda en la variable temporal
+                var temp =$(this).attr('src');//almacena momentaneamente lo que esta en src
+                //sobreescribe src con alt-src
+                $(this).attr('src',$(this).attr('alt-src'));//sobreecribe lo del src
+                //ahora sobreescribe con temp
+                $(this).attr('alt-src',temp);//sobre escribe el contenido de alt-src por temp
+            });
+            
+          
+
+              //fin jquery
+   });
+    </script>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    
+</body>
+</html>

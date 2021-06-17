@@ -26,7 +26,49 @@
         $('img').click(function(){
                $(this).hide();//el elemento que gatilla la accion con eso se captura
                 console.log()
+
             });
+            //addclass, agrega una clase o mas clases
+            $("#parrafo3").click(function(){
+                    $(this).addClass('colores');
+                });
+            //.html hace una sobreescriotura
+            $('#btnhtml').click(function(){
+                //reemplaza todo por la imagen 
+                //reemplaza el contenido del elemento el html
+                console.log($('#container').html());
+                $('#container').html('<img src="jquery.jpg">');
+
+            });
+            //attr
+            $('#parrafo4').click(function(){
+                $('#container').append('<img src="jquery.jpg">');
+                $('img').attr('width', '200px');
+                //estilos directos
+                //no es mantenible por que se esta poniendo directo sobre el elemento
+                $('#parrafo4').attr('style','color: red');
+                alert($('#parrafo4').attr('id'));//consultar el contenido del atributo
+
+            });
+            //val--captura el valor como string
+            $('#boton5').click(function(){
+                //validar si el dato ingresado es saber si es un numero o no
+                if(isNaN(texto1)){
+                    alert("No es un numero");
+                }
+                var texto1= $('#text1').val();
+                var texto2= $('#text2').val();
+                //convertir a numero para realizar operaciones matematica
+                alert (Number(texto1)+" "+ parseInt(texto1) + " "+ parseFloat(texto1));
+                
+
+
+                //alert(texto1 +texto2)
+
+            });
+
+            
+
                 //fin jquery
    });
     </script>
@@ -34,16 +76,30 @@
         img{
             width: 200px;
         }
+        .colores{
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div id="container">
         <img src="jquery.jpg" id="image1" />
     <img src="jquery.jpg" id="image2" />
     <img src="jquery.jpg" id="image3" />
     <img src="jquery.jpg" id="image4" />
     <img src="jquery.jpg" id="image5" />
     </div>
+    <br>
+    <h1>addClass</h1>
+    <p id="parrafo3"> Este es el parrafo 3</p>
+
+    <hr>
+    <h1>ATTR</h1>
+    <p id="parrafo4">Este es el parrafo 4</p>
+    <input id="text1" type="text"><input id="text2" type="text">
+    <button id="boton5"> Click Val</button>
+
     
 </body>
+<button id="btnhtml">Funcion Html</button>
 </html>
