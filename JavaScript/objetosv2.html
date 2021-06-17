@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Objetos:::::...</title>
+    <script>
+        var users = [{name: "Michael", age:37}, 
+                    {name: "John", age:30}, 
+                    {name: "David", age:27}
+                ];
+                //edad de john
+                console.log("La edad de John es: "  +users[1].age);
+                //nombre del primer objeto
+                console.log("El nombre del primer objeto es: "+users[0].name);
+
+                //for para imprimir el nombre y edades 
+                for (var i = 0; i<users.length;i++){
+                 console.log(users[i].name + " - " + users[i].age);
+                }
+                //impresion de los mayores de edad
+                for (var i=0; i<users.length; i++){
+	                if (users[i].age > 18){
+                     console.log("Es mayor de edad: " +users[i].name);
+		            } 
+                }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
