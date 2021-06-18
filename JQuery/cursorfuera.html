@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Cursor En fuera</title>
+    <script>
+        $(document).ready(function() {
+            function crearrestaurar() {
+                //de manera dimanica
+                for (let i = 1; i <= 4; i++) {
+                    $('#container').append('<img src=foto' + i + '.jpg alt-src=pas' + i + '.jpg><br>');
+                    $('#container').append('<br>');
+                    $('img').attr('width', '150');
+                    $('img').attr('height', '150');
+
+
+
+
+                }
+
+
+                //funcion de intercambio
+                $('img').hover(function() {
+                    var temp = $(this).attr('src');
+                    $(this).attr('src', $(this).attr('alt-src'));
+                    $(this).attr('alt-src', temp);
+
+                });
+            }
+
+            crearrestaurar();
+            //boton despues de div container
+            $('#container').after('<button>Restaurar</button>');
+            //para restaurar las imagenes
+
+
+
+
+            //fin jquery
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <!--<button>Restaurar</button>-->
+
+</body>
+
+</html>
