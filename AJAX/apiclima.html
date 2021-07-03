@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Clima</title>
+    <script>
+        $(document).ready(function() {
+
+            $('button').click(function() {
+                html = "";
+                var ciudad = $('#ciudad').val(); //obtener el elemento del input, tipo texto, email, radio button
+                //textarea .val() captura el dato q el ususrio hayya ingresado
+                var url = 'https://api.openweathermap.org/data/2.5/weather?q= ' + ciudad + ' &appid=9a3c1b752b7c362097f022f8a88620aa';
+
+                $.get(url, function(respuesta) {
+                    console.dir(respuesta);
+                    /*if (respuesta.cod != "404") {
+                            html= "<h2>" + respuesta.mane + "</h2";
+                            html= '<p Temperatura: ' + respuesta.main.temp + '</p>';
+                            html= '<p> Cielos    : ' + respuesta.weater[0].min + '</p';
+                            html= '<p> Longitud  : [' + respuesta.coord.lon
+
+                        }*/
+                    $('#container').append('');
+                    $('#container').append('<p> La Temperatura es: ' + respuesta.main.temp + ' grados F° </p>');
+                    $('#container').append('<p> La densidad es: ' + respuesta.wind.deg + '</p>');
+                    $('#container').append('<p> El  viento  es: ' + respuesta.wind.speed + '</p>');
+                    $('#container').append('<p> La latitud  es: ' + respuesta.coord.lat + '</p>');
+                    $('#container').append('<p> La longitud es: ' + respuesta.coord.lon + '</p>');
+
+
+
+
+
+                }, "json");
+            });
+            //de manera dimanica
+
+
+
+
+            //fin jquery
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" name="ciudad" id="ciudad">
+        <button>Consultar</button>
+
+    </div>
+
+</body>
+
+</html>
