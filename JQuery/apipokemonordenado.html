@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>API POKEMON ORDENADO 10</title>
+    <script>
+        $(document).ready(function() {
+            //api pokemon ordenado 10
+            //de manera dimanica
+            var arrayTemporal = [];
+            for (let i = 1; i <= 10; i++) {
+                $.get("https://pokeapi.co/api/v2/pokemon/" + i + "/", function(respuesta) {
+                    //console.log(respuesta); //imprime toda la informacion del pokemon
+                    //console.log(respuesta.id); //imprime solo el contenido del id
+                    //console.log(respuesta.sprites.front_default); //imprime la url de la imagen
+
+                    // $('#container').append('<p>El id es:' + respuesta.id + '  </p>');
+                    //$('#container').append('<p>El nombre es:' + respuesta.name + '  </p>');
+                    // $('#container').append('<img src="' + respuesta.sprites.front_default + '" alt="">');
+                    arrayTemporal.push(respuesta);
+                    //console.log(arrayTemporal);
+                    //ordena menor por defecto a mayor ordena al reves sort().reverse()
+                    //ordena array de objetos
+                    arrayTemporal.sort((a, b) => (a.id > b.id) && 1 || -1);
+                    console.log(arrayTemporal); //array ordenado
+                    if (arrayTemporal.length == 10) {
+                        for (let j = 0; j < arrayTemporal.length; j++) {
+                            $('#container').append('<p>El id es:' + arrayTemporal[j].id + '  </p>');
+                            $('#container').append('<p>El nombre es:' + arrayTemporal[j].name + '  </p>');
+                            $('#container').append('<img src="' + arrayTemporal[j].sprites.front_default + '" alt="">');
+                        }
+
+                    }
+
+                    // console.dir(respuesta);
+                }, "json");
+                console.log("1fuera del get dentro del for");
+            }
+            console.log("2fuera del get dentro del for");
+
+
+
+
+            //fin jquery
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+
+</body>
+
+</html>

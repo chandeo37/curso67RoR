@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Formulario</title>
+    <script>
+        $(document).ready(function() {
+            //de manera dimanica
+            $('#form1').submit(function() {
+                console.log($(this).serialize());
+                return false;
+            });
+            $('.btn').click(function() {
+                $('#form1').submit();
+            });
+
+
+
+
+            //fin jquery
+        });
+    </script>
+</head>
+
+<body>
+    <form id="form1" action="process.php" method="post">
+        Nombre <input type="text" name="nombre"> Apellido <input type="text" name="apellido"> Email <input type="text" name="email">
+        <input type="submit" value="submit">
+
+    </form>
+    <button class="btn"> Cliclea para enviar</button>
+
+</body>
+
+</html>
